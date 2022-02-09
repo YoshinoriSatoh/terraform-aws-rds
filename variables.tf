@@ -1,4 +1,4 @@
-tvariable "tf" {
+variable "tf" {
   type = object({
     name          = string
     shortname     = string
