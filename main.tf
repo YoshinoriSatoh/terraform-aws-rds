@@ -87,6 +87,7 @@ resource "aws_db_instance" "main" {
   maintenance_window                  = var.maintenance_window
   monitoring_interval                 = var.monitoring_interval
   enabled_cloudwatch_logs_exports     = var.enabled_cloudwatch_logs_exports
+  skip_final_snapshot                 = var.in_development
   final_snapshot_identifier           = var.in_development ? null : "${var.tf.fullname}-${formatdate("YYYY-mm-DD", timestamp())}"
   copy_tags_to_snapshot               = true
 }
