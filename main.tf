@@ -59,7 +59,7 @@ resource "aws_security_group_rule" "main" {
 }
 
 resource "aws_db_instance" "main" {
-  name                                = var.dbname
+  db_name                             = var.db_name
   engine                              = var.engine.name
   engine_version                      = var.engine_version
   multi_az                            = var.multi_az

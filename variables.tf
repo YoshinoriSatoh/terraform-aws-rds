@@ -72,7 +72,7 @@ variable "port" {
   default = 3306
 }
 
-variable "dbname" {
+variable "db_name" {
   type    = string
   default = "main"
 }
