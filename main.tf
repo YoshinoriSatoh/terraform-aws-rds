@@ -54,7 +54,7 @@ resource "aws_security_group_rule" "main" {
   from_port                = var.port
   to_port                  = var.port
   protocol                 = "tcp"
-  source_security_group_id = each.value.id
+  source_security_group_id = each.value.security_group_id
   security_group_id        = aws_security_group.main.id
 }
 
